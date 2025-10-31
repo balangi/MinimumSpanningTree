@@ -25,7 +25,10 @@ do
     Console.WriteLine("1. Print Prim-Jarnik MST");
     Console.WriteLine("2. Print Kruskal MST");
     Console.WriteLine("3. Print Reverse-Delete MST");
+    Console.WriteLine("4. Print Dijkstra");
+    Console.WriteLine(" ");
     Console.WriteLine("Q. Exit");
+    Console.WriteLine(" ");
     Console.Write("Enter your choice: ");
 
     choice = Console.ReadLine()?.Trim().ToUpper();
@@ -36,17 +39,26 @@ do
             Console.WriteLine("\n=== Prim-Jarnik MST ===");
             PrimJarnik.Run(graph, verticesCount);
             break;
+
         case "2":
             Console.WriteLine("\n=== Kruskal MST ===");
             Kruskal.Run(graph, verticesCount);
             break;
+
         case "3":
             Console.WriteLine("\n=== Reverse-Delete MST ===");
             ReverseDelete.Run(graph, verticesCount);
             break;
+
+        case "4":
+            Console.WriteLine("\n=== Dijkstra ===");
+            Dijkstra.Run(); // Runs interactive Dijkstra
+            break;
+
         case "Q":
             Console.WriteLine("Exiting program...");
             break;
+
         default:
             Console.WriteLine("Invalid choice. Please try again.");
             break;
