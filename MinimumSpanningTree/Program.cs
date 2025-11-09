@@ -26,6 +26,7 @@ do
     Console.WriteLine("2. Print Kruskal MST");
     Console.WriteLine("3. Print Reverse-Delete MST");
     Console.WriteLine("4. Print Dijkstra");
+    Console.WriteLine("5. Print Huffman Encoding/Decoding");
     Console.WriteLine(" ");
     Console.WriteLine("Q. Exit");
     Console.WriteLine(" ");
@@ -53,6 +54,11 @@ do
         case "4":
             Console.WriteLine("\n=== Dijkstra ===");
             Dijkstra.Run(); // Runs interactive Dijkstra
+            break;
+
+        case "5":
+            Console.WriteLine("\n=== Huffman Encoding / Decoding ===");
+            HuffmanCoding.Run();
             break;
 
         case "Q":
